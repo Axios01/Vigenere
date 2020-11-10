@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vigenere</title>
     <script src="js/logica.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
     <div class="div_inicio">
         <div class="cont_perfil">
-            <h1>Subneteo</h1>
+            <h1>Vigenere</h1>
             <table>
                 <tr>
                     <td>
@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="button" class="boton" value="Cifrar" onclick="OperacionesVigi(mensaje,clave)" >
+                        <input type="button" class="boton" value="Cifrar" onclick="Descifrar(Cifrar(true))" >
                     </td>
                     <td>
                         
@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="button" class="boton" value="Descifrar" onclick="prueba()" >
+                        <input type="button" class="boton" value="Descifrar" onclick="Descifrar(Cifrar(false))" >
                     </td>
                     <td>
                         
@@ -53,7 +53,7 @@
             <table>
                 <tr>
                     <td>
-                        <textarea id="caja"></textarea>
+                        <textarea id="caja" class="input_text areatext_format" readonly></textarea>
                     </td>
                 </tr>
             </table> 

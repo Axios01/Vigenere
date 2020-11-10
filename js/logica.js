@@ -205,9 +205,9 @@ function Charizador (coso){
 
    var arr = [];
 
-   for(let index = 0; index < coso.length; i++){
+   for(let index = 0; index < coso.length; index++){
 
-        var con = Frase.charCodeAt(i);
+        var con = coso.charCodeAt(index);
 
         if(con <= 122 && con >= 97)
             con = con - 32;
@@ -257,7 +257,7 @@ function Charizador (coso){
    var cont = 0;
    if (bandera == true){
     for(let i = 0; i < mensaje2.length; i++){
-        if(Frache[i] == 32){
+        if(mensaje2[i] == 32){
 
             salto.push(32);
             cont += 1;
@@ -289,31 +289,30 @@ function Charizador (coso){
    return salto;
   }
 
-
-
-
-
   function Descifrar(coso){
 
    var regres = "";
 
    for(let i = 0; i < coso.length; i++){
-    if (coso[i] == 15 ){
-        regres += String.fromCharCode(209);
-    }
-    if (coso[i] == 32)
-    {
-        regres += String.fromCharCode(32);
-    }
-    if (coso[i] == 0)
-    {
-        regres += String.fromCharCode(90);
-    }
-    if(coso[i] < 15 && coso [i] > 0)
-    regres += String.fromCharCode(coso[i]+64);
-    else if(coso[i] > 15 && coso[i] < 28){
-        regres += String.fromCharCode(coso[i]+63);
-    }
+
+        if (coso[i] == 15 ){
+            regres += String.fromCharCode(209);
+        }
+
+        if (coso[i] == 32){
+            regres += String.fromCharCode(32);
+        }
+
+        if (coso[i] == 0){
+            regres += String.fromCharCode(90);
+        }
+
+        if(coso[i] < 15 && coso [i] > 0)
+            regres += String.fromCharCode(coso[i]+64);
+
+        else if(coso[i] > 15 && coso[i] < 28){
+            regres += String.fromCharCode(coso[i]+63);
+        }
    }
-   document.getElementById('Resultado').value = regres;
+   document.getElementById('caja').value = regres;
   }
