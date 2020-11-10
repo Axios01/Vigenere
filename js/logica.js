@@ -253,8 +253,8 @@ function Charizador (coso){
 
    var mensaje2 = Charizador (mensaje);
    var clave2 = Charizador (clave);
-   
    var cont = 0;
+
    if (bandera == true){
     for(let i = 0; i < mensaje2.length; i++){
         if(mensaje2[i] == 32){
@@ -264,7 +264,7 @@ function Charizador (coso){
 
         }else{
 
-            salto.push((clave2[(i - cont) % clave2.length] + mensaje[i]) % 27);
+            salto.push((clave2[(i - cont) % clave2.length] + mensaje2[i]) % 27);
 
         }
     }
@@ -307,9 +307,9 @@ function Charizador (coso){
             regres += String.fromCharCode(90);
         }
 
-        if(coso[i] < 15 && coso [i] > 0)
+        if(coso[i] < 15 && coso [i] > 0){
             regres += String.fromCharCode(coso[i]+64);
-
+        }
         else if(coso[i] > 15 && coso[i] < 28){
             regres += String.fromCharCode(coso[i]+63);
         }
