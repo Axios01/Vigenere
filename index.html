@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere</title>
+    <script src="js/logica.js"></script>
+    
+</head>
+<body>
+    <div class="div_inicio">
+        <div class="cont_perfil">
+            <h1>Subneteo</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label>Mensaje:</label>
+                    </td>
+                    <td>
+                        <input type="input_text" class="input_text" id="mensaje">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Clave:</label>
+                    </td>
+                    <td>
+                        <input type="input_text" class="input_text" id="clave">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="boton" value="Cifrar" onclick="OperacionesVigi(mensaje,clave)" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="boton" value="Descifrar" onclick="prueba()" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="cont_perfil">
+        
+            <table>
+                <tr>
+                    <td>
+                        <textarea id="caja"></textarea>
+                    </td>
+                </tr>
+            </table> 
+
+        </div>
+    </div>  
+</body>
+</html>
